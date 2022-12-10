@@ -1,15 +1,15 @@
-console.log('Hello, welcome to rock paper scissors 2.0 update.');
+console.log('Hello, welcome to rock paper scissors 2.1 update.');
 console.log('')
 console.log('Instructions:')
 console.log('')
 console.log('look where says getUserChoise(") near the bottom of the code and inside of the code you can paste in the promps')
 console.log('')
-console.log('The prompts are Rock, Paper, Scissors, bomb, revenge, gun, suicide, sword, glass, dagger, and shoes')
+console.log('The prompts are Rock, Paper, Scissors, bomb, revenge, gun, suicide, sword, glass, dagger, shoes and water')
 console.log('')
 const getUserChoice = userImput => {
   userImput
   = userImput.toLowerCase();
-  if (userImput === 'rock' || userImput === 'paper' || userImput === 'scissors' || userImput === 'bomb' || userImput === 'revenge' || userImput === 'gun' || userImput === 'suicide' || userImput === 'sword' || userImput === 'glass' || userImput === '' || userImput === 'dagger' || userImput === 'shoes'){
+  if (userImput === 'rock' || userImput === 'paper' || userImput === 'scissors' || userImput === 'bomb' || userImput === 'revenge' || userImput === 'gun' || userImput === 'suicide' || userImput === 'sword' || userImput === 'glass' || userImput === '' || userImput === 'dagger' || userImput === 'shoes' || userImput === 'water'){
     return userImput;
   } else {
     console.log('Error!')
@@ -26,7 +26,6 @@ const getUserChoice = userImput => {
    return 'paper'
    case 2: 
    return 'scissors'
-    
    }
  };
 
@@ -39,6 +38,21 @@ const getUserChoice = userImput => {
     return 'Imagine losing to a bot';
   } else {
     return 'You won!';
+  }
+}
+if (userChoice === 'water') {
+  if (computerChoice === 'paper') {
+    return 'The water soaked the paper which got all over the but and the bot was fryed'
+  }
+}
+if (userChoice === 'water') {
+  if (computerChoice === 'scissors') {
+    return 'the scissors got very rusty and made the bot rust and was now frozen until the year 3057'
+  }
+}
+if (userChoice === 'water') {
+  if (computerChoice === 'rock') {
+    return 'you poured water on a rock. nothing happened'
   }
 }
 if (userChoice === 'shoes') {
@@ -115,7 +129,7 @@ if (userChoice === 'bomb') {
 
  }
   const playGame = () => {
-   const userChoice = getUserChoice('');
+   const userChoice = getUserChoice('water');
    const computerChoice = getComputerChoice();
    console.log('You threw: ' + userChoice);
    console.log('The computer threw: ' + computerChoice);
